@@ -46,8 +46,7 @@
 			overflow: hidden;
 			width: 0; /* Initial width to hide the text */
 			white-space: nowrap;
-			border-right: 4px solid rgba(255, 255, 255, 0.75); /* Cursor effect */
-			animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite; /* Typing animation */
+			animation: typing 2s steps(30) 1s forwards; /* Faster typing speed */
 		}
 
 		/* Typing animation */
@@ -60,13 +59,6 @@
 			}
 		}
 
-		/* Blinking cursor animation */
-		@keyframes blink {
-			50% {
-				border-color: transparent;
-			}
-		}
-
 		/* Paragraph */
 		p {
 			font-size: 1.2rem;
@@ -76,8 +68,7 @@
 			overflow: hidden;
 			width: 0; /* Hide text initially */
 			white-space: nowrap;
-			border-right: 4px solid rgba(255, 255, 255, 0.75); /* Cursor effect */
-			animation: typing 6s steps(40) 4s forwards, blink 0.75s step-end infinite; /* Typing animation for paragraph */
+			animation: typing 3s steps(40) 3s forwards; /* Faster typing animation for paragraph */
 		}
 
 		/* CTA Button */
