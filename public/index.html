@@ -5,13 +5,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Hello World</title>
-	<!-- Google Fonts link for Oswald -->
-	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
 	<style>
 		/* General reset */
 		body {
 			margin: 0;
-			font-family: 'Oswald', sans-serif; /* Changed font to Oswald */
+			font-family: 'Georgia', serif;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -88,6 +86,8 @@
 			transition: transform 0.3s ease, background-color 0.3s ease, text-shadow 0.3s ease; /* Added text-shadow transition */
 			margin-top: 30px;
 			text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.5); /* Highlighted text shadow */
+			opacity: 0; /* Hide the button initially */
+			animation: fadeIn 1s 6s forwards; /* Delay appearance of button */
 		}
 
 		/* Button Hover Effect */
@@ -95,6 +95,16 @@
 			background-color: #b62e44; /* Slightly darker red when hovered */
 			transform: scale(1.1); /* Slight zoom effect on hover */
 			text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.5); /* Keep the glowing text shadow on hover */
+		}
+
+		/* Fade-in animation for the button */
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
 		}
 	</style>
 </head>
