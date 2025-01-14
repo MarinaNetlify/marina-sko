@@ -43,6 +43,28 @@
 			font-weight: 700;
 			letter-spacing: 1.5px;
 			text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.5);
+			overflow: hidden;
+			width: 0; /* Initial width to hide the text */
+			white-space: nowrap;
+			border-right: 4px solid rgba(255, 255, 255, 0.75); /* Cursor effect */
+			animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite; /* Typing animation */
+		}
+
+		/* Typing animation */
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+			to {
+				width: 100%;
+			}
+		}
+
+		/* Blinking cursor animation */
+		@keyframes blink {
+			50% {
+				border-color: transparent;
+			}
 		}
 
 		/* Paragraph */
@@ -51,6 +73,11 @@
 			line-height: 1.8;
 			max-width: 600px;
 			margin: 0 auto;
+			overflow: hidden;
+			width: 0; /* Hide text initially */
+			white-space: nowrap;
+			border-right: 4px solid rgba(255, 255, 255, 0.75); /* Cursor effect */
+			animation: typing 6s steps(40) 4s forwards, blink 0.75s step-end infinite; /* Typing animation for paragraph */
 		}
 
 		/* CTA Button */
@@ -58,7 +85,7 @@
 			display: inline-block;
 			padding: 15px 30px;
 			font-size: 1.2rem;
-			background-color: #ff6347; /* Tomato color */
+			background-color: #8E172A; /* Dark red as the default color */
 			color: white;
 			border: none;
 			border-radius: 8px;
@@ -72,7 +99,7 @@
 
 		/* Button Hover Effect */
 		.cta-button:hover {
-			background-color: #8E172A; /* Darker red */
+			background-color: #b62e44; /* Slightly darker red when hovered */
 			transform: scale(1.1); /* Slight zoom effect on hover */
 			text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.5); /* Keep the glowing text shadow on hover */
 		}
